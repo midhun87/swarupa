@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chinnu's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+.profile-image {
+  width: 20px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 30px; /* Rounded corners */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.profile-image:hover {
+  filter: grayscale(0%);
+}
+.rounded-img {
+  width: 100x;                 /* Adjust as needed */
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);      /* Makes it black & white */
+  border-radius: 20px;          /* Rounded rectangle look */
+}
+
+  /* 🧠 Contact Section */
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 30px;
+    border: 1.5px solid gray;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .contact-item i {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-item:hover {
+    transform: scale(1.05);
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:focus {
+    outline: none;
+  }
+
+  /* 🏆 Experience Cards */
+  .experience-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+    overflow-x: auto;
+  }
+
+  .experience-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+
+  .experience-card h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  /* 💻 Coding Arena Section */
+  #coding-arena {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .subtitle {
+    color: #4a3b2d;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .arena-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .arena-box {
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    padding: 25px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .arena-box:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+
+  .arena-box img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .arena-box p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+  }
+
+  .arena-box a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .arena-box a:hover {
+    cursor: pointer;
+  }
+
+  /* 🌟 Endorsements Section */
+  #endorsements {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  #endorsements p {
+    color: gray;
+    margin-bottom: 8px;
+  }
+
+  #endorsements h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  #endorsements h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .endorse-badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .endorse-badge {
+    padding: 15px 25px;
+    border: 2px solid grey;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: white;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    max-width: 320px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .endorse-badge:hover {
+    transform: scale(1.05);
+    background-color: #f5f5f5;
+  }
+</style>
+
+
+<style>
+
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px 40px;">
+    <div class="logo">
+<img src="https://res.cloudinary.com/djdwpjm7x/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max/v1744807762/WhatsApp_Image_2025-04-15_at_21.34.17_cfcfc35b_kks9cm.jpg" alt="Logo" style="width: 100px; height: 100px; border-radius: 50%;">
+</div>
+    <nav style="margin-top: 10px;">
+      <a href="#about" style="margin: 0 15px; text-decoration: none; color: black; font-size: 20px;">About</a>
+      <a href="#skills" style="margin: 0 15px; text-decoration: none; color: black; font-size: 20px;">Skills</a>
+     <a href="#experience" style="margin: 0 15px; text-decoration: none; color: black; font-size: 20px;">Experience</a>
+     <a href="#coding-arena" style="margin: 0 15px; text-decoration: none; color: black; font-size: 20px;">Profiles</a>
+      <a href="#" style="margin: 0 15px; text-decoration: none; color: black; font-size: 20px;">Projects</a>
+      <a href="#endorsements" style="margin: 0 15px; text-decoration: none; color: black; font-size: 20x;">Certs</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="display: flex; align-items: center; justify-content: center; padding: 20px 40px 40px 40px;">
+    <div class="home-img" style="margin-right: 60px; margin-top: -30px;">
+     <img src="https://res.cloudinary.com/djdwpjm7x/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1744807762/WhatsApp_Image_2025-04-15_at_21.34.32_7f9ff296_svplbd.jpg" alt="My Photo" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover;">
+
+    </div>
+    <div class="home-content" style="text-align: center;">
+      <h4 style="color: #555; margin-bottom: 5px;">Hey! Welcome to my corner of the internet. I'm</h4><br>
+      <div style="line-height: 1;">
+        <h1 style="font-size: 30px; font-weight: bold; margin: 0;">Bindu Swarupa Vemulapalli </h1><br>
+      </div>
+      <h2 style="color: #444; margin-top: 5px;">A coding and data enthusiast.</h2>
+
+   <!-- Resume and Contact Buttons -->
+<div style="margin: 20px 0; text-align: center;">
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+<a href="https://drive.google.com/file/d/1NDXl0erSN8zamqhpwa7ND10i9DEqib5y/view?usp=sharing" target="_blank" style="width: 160px; text-align: center; padding: 12px 0; background: black; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">Resume</a>
+<a href="#Contact" style="width: 160px; text-align: center; padding: 12px 0; background: black; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">Contact</a>
+
+  </div>
+
+  <!-- LinkedIn and GitHub Icons -->
+  <div style="display: flex; justify-content: center; gap: 25px; margin-top: 15px;">
+    <a href="https://www.linkedin.com/in/binduswarupavemulapalli/" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: black; color: white; font-size: 30px; text-decoration: none;">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/Binduswarupa" target="_blank" style="color: black; font-size: 40px; text-decoration: none;">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding: 80px 40px; text-align: center;">
+    <p style="color: gray; font-size: 18px;">Get To Know More</p>
+    <h1 style="font-size: 40px; margin-bottom: 40px;">About Me</h1>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px;">
+      <!-- Image -->
+<img src="https://res.cloudinary.com/djdwpjm7x/image/upload/v1744807762/WhatsApp_Image_2025-04-15_at_21.34.09_99c96cd3_fhooln.jpg" alt="Bindu Profile"  class="rounded-img ">
+      <!-- Experience and Education -->
+      <div>
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+         <!-- Experience and Education -->
+<div>
+  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+    <!-- Experience Card -->
+    <div style="border: 2px solid #ccc; padding: 15px 30px; border-radius: 20px; width: 320px;">
+      <i class="fas fa-award" style="font-size: 24px;"></i>
+      <h3>Experience</h3>
+      <p style="color: #808080;">Fresher<br>Experienced Intern<br>Domains - Web & Data.</p>
+    </div>
+
+    <!-- Education Card -->
+    <div style="border: 2px solid #ccc; padding: 15px 30px; border-radius: 20px; width: 320px;">
+      <i class="fas fa-users" style="font-size: 24px;"></i>
+      <h3>Education</h3>
+      <p style="color: #808080;">Bachelor of Technology<br>Artificial Intelligence & Data Science<br>LBRCE'26</p>
+    </div>
+  </div>
+
+  <!-- Bio -->
+  <div style="text-align: center;">
+    <p style="margin-top: 30px; font-size: 12px; max-width: 450px; line-height: 1.4; margin-left: auto; margin-right: auto; color: #808080;">
+      Passionate AI & Data Science undergrad with a CGPA of 9.32, skilled in machine learning, deep learning,
+      cloud computing, and web development. I'm dedicated to utilizing my skills to develop cutting-edge
+    </p>
+  </div>
+</div>
+
+
+      </div>
+</section>
+
+   <!-- Skills Section -->
+<section id="skills" style="padding: 80px 40px; text-align: center;">
+  <p style="color: gray; font-size: 18px;">Check Out My</p>
+  <h1 style="font-size: 40px; margin-bottom: 40px;">Expertise</h1>
+
+  <div style="width: 720px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px;">
+    
+    <!-- Skill Card 1: C -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <strong style="font-size: 30px;">C</strong>
+      <p style="margin-top: 10px;">C</p>
+    </div>
+
+    <!-- Skill Card 2: Python -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fab fa-python" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">Python</p>
+    </div>
+
+    <!-- Skill Card 3: Java -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fab fa-java" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">Java</p>
+    </div>
+
+    <!-- Skill Card 4: DSA -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fas fa-code" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">DSA</p>
+    </div>
+
+    <!-- Skill Card 5: MySQL -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fas fa-database" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">MySQL</p>
+    </div>
+
+    <!-- Skill Card 6: HTML -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fab fa-html5" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">HTML</p>
+    </div>
+
+    <!-- Skill Card 7: CSS -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fab fa-css3-alt" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">CSS</p>
+    </div>
+
+    <!-- Skill Card 8: JavaScript -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fab fa-js-square" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">JavaScript</p>
+    </div>
+
+    <!-- Skill Card 9: React -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fab fa-react" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">React</p>
+    </div>
+
+    <!-- Skill Card 10: MongoDB -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fas fa-leaf" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">MongoDB</p>
+    </div>
+
+    <!-- Skill Card 11: AI -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fas fa-microchip" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">AI</p>
+    </div>
+
+    <!-- Skill Card 12: ML -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fas fa-project-diagram" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">ML</p>
+    </div>
+
+    <!-- Skill Card 13: DL -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fas fa-brain" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">DL</p>
+    </div>
+
+    <!-- Skill Card 14: NLP -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fas fa-comment-dots" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">NLP</p>
+    </div>
+
+    <!-- Skill Card 15: AWS -->
+    <div style="background: #1e1e1e; color: white; width: 120px; height: 120px; border-radius: 15px;
+                display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="fab fa-aws" style="font-size: 30px;"></i>
+      <p style="margin-top: 10px;">AWS</p>
+    </div>
+</section>
+
+ <!-- Experience  Section -->
+<section id="Experience" style="padding: 80px 40px; text-align: center;">
+  <p style="color: gray; font-size: 18px;">Dive into My</p>
+  <h1 style="font-size: 40px; margin-bottom: 40px;">Experience</h1>
+  <div class="experience-container">
+<section id="experience" class="experience-section">
+  <!-- Experience content here -->
+</section>
+
+  <div class="experience-card">
+      <h2>Google AI & ML Virtual Intern</h2>
+      <p class="organization"><i class="fa-solid fa-building"></i> EduSkills Foundation.</p>
+      <p class="duration"><i class="fa-solid fa-calendar-days"></i> Jan 2025 – Mar 2025</p>
+      <p class="experience-desc">
+        Developed and optimized CNN models for image classification and object detection, enhancing model performance and efficiency. Improved a custom AI-powered product image search system for faster and more accurate results.
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <h2>Machine<br> Learning Intern</h2>
+      <p class="organization"><i class="fa-solid fa-building"></i> Prodigy Info Tech.</p>
+      <p class="duration"><i class="fa-solid fa-calendar-days"></i> Dec 2024 – Jan 2025</p>
+      <p class="experience-desc">
+       Worked on ML mini-projects involving data preprocessing, model building, and evaluation.Applied Python, Pandas, scikit-learn, and Matplotlib to solve real-world problems.Gained hands-on experience in implementing supervised learning algorithms.
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <h2>Mern Stack Intern</h2>
+      <p class="organization"><i class="fa-solid fa-building"></i>Biztron Technologies Pvt. Ltd.</p>
+      <p class="duration"><i class="fa-solid fa-calendar-days"></i> June 2024</p>
+      <p class="experience-desc">
+        Developed a Social media app where user can post,share,like,comment the others posts and manage their account which has user authentication also.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section id="coding-arena">
+  <p style="color: gray; font-size: 18px;">Walk through My</p>
+  <h1 class="title">Coding Arena</h1>
+
+  <div class="arena-grid">
+
+    <div class="arena-box" id="leetcode-box">
+      <a href="https://leetcode.com/u/VEMULAPALLI_BINDUSWARUPA/" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="80" />
+        <p>LeetCode</p>
+      </a>
+    </div>
+
+    <div class="arena-box" id="codechef-box">
+      <a href="https://www.codechef.com/users/swarupa_26" target="_blank" rel="noopener noreferrer">
+        <img src="https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo.svg" alt="CodeChef" width="80" />
+        <p>CodeChef</p>
+      </a>
+    </div>
+
+    <div class="arena-box" id="hackerrank-box">
+      <a href="https://www.hackerrank.com/profile/swarupa_26" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank" width="80" />
+        <p>HackerRank</p>
+      </a>
+    </div>
+
+    <div class="arena-box" id="codeforces-box">
+      <a href="https://www.codeforces.com/profile/swarupa_26" target="_blank" rel="noopener noreferrer">
+        <img src="https://sta.codeforces.com/s/11725/images/codeforces-logo-with-telegram.png" alt="Codeforces" width="100" />
+        <p>Codeforces</p>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="endorsements">
+  <p>Have a Look At My</p>
+  <h1>Endorsements</h1>
+
+  <h3>Global certifications</h3>
+  <div class="endorse-badge-container">
+    <div class="endorse-badge">Certified Salesforce AI Associate</div>
+  </div>
+
+  <h3>Course work</h3>
+  <div class="endorse-badge-container">
+    <div class="endorse-badge">Web Development Fundamentals - IBM</div>
+    <div class="endorse-badge">Applied Data Science with Python - IBM</div>
+    <div class="endorse-badge">Cyber Security Essentials - Cisco</div>
+    <div class="endorse-badge">Introduction to Packet Tracer - Cisco</div>
+    <div class="endorse-badge">MongoDB and the Document Model</div>
+  </div>
+
+  <h3>Achievements</h3>
+  <div class="endorse-badge-container">
+       <div class="endorse-badge"> Secured 1st Position in Academics <br>Acedemic Topper 2K23-24</div>
+    <div class="endorse-badge">Secured 1st place in Protection of ozone layer(Elocution) - Lakshya 2k25</div>
+    <div class="endorse-badge">Published a SCOPUS conference paper  on <br>"Real-Time Campus Department Classification"</div>
+  </div>
+</section>
+
+
+ <!-- Contact  Section -->
+<section id="Contact" style="padding: 20px 40px; text-align: center;">
+  <p style="color: gray; font-size: 18px; margin-bottom: 5px;">Get in Touch</p> <!-- Reduced margin-bottom -->
+<h1 style="font-size: 50px; font-weight: bold; margin-top: 5px; margin-bottom: 60px; font-family: 'Poppins', sans-serif;">Contact Me</h1> <!-- Increased margin-bottom -->
+
+<div class="experience-container">
+  <section id="Contact" class="Contact-section">
+  </section>
+  <div class="contact-container" style="margin-top: 2px;"> <!-- Increased margin-top -->
+    <a class="contact-item" href="https://mail.google.com/mail/?view=cm&to=swarupavemulapallii@gmail.com" target="_blank">
+      <i class="fa fa-envelope"></i>
+      <span>Mail</span>
+    </a>
+
+    <div class="contact-item" onclick="window.open('https://wa.me/919052292668', '_blank')" style="cursor: pointer;">
+      <i class="fa fa-phone"></i>
+      <span>Phone</span>
+    </div>
+
+    <a class="contact-item" href="https://www.linkedin.com/in/your-profile/" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+      <span>LinkedIn</span>
+    </a>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+  </div>
+</section>
+
+<nav style="margin-top: 10px; text-align: center;">
+  <a href="#about" style="margin: 0 15px; text-decoration: none; color: black; font-size: 25px;">About</a>
+  <a href="#skills" style="margin: 0 15px; text-decoration: none; color: black; font-size: 25px;">Skills</a>
+  <a href="#experience" style="margin: 0 15px; text-decoration: none; color: black; font-size: 25px;">Experience</a>
+  <a href="#coding-arena" style="margin: 0 15px; text-decoration: none; color: black; font-size: 25px;">Profiles</a>
+  <a href="#" style="margin: 0 15px; text-decoration: none; color: black; font-size: 25px;">Projects</a>
+  <a href="#endorsements" style="margin: 0 15px; text-decoration: none; color: black; font-size: 25px;">Certs</a>
+</nav>
+ 
+</body>
+</html>
